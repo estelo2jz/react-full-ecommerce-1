@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Typography, Button, Divider } from '@material-ui/core';
+import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 
-const PaymentForm = () => {
+import Review from './Review';
+
+// we have access to all the product inside of the checkout component, inside of the generateToken async function.
+const PaymentForm = ({ checkoutToken }) => {
   return (
-    <div>
-      PaymentForm
-    </div>
+    <>
+      <Review checkoutToken={checkoutToken} />
+    </>
   )
 }
 
