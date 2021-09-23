@@ -49,7 +49,7 @@ const App = () => {
     const response = await commerce.cart.remove(productId);
     setCart(response.cart);
   }
-  const handleEmptyCart = async (productId) => {
+  const handleEmptyCart = async () => {
     const response = await commerce.cart.empty();
     setCart(response.cart);
   }
